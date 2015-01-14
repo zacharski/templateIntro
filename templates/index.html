@@ -2,14 +2,17 @@
 
 {% block content %}
         <h1>Welcome to the UMW R/C club</h1>
+        <p>Our current club president {{president}}</p>
+        <p>The next build your own workshop is 20 January at 2pm where we will be building {{project.company}}'s {{project.plane}}. The cost is ${{project.cost}}</p>
+
         <p>Join us on the quad every Wednesday night at 6pm to fly quadcopters and R/C planes</p>
         {% if flyingP %}
         <h3> Join us tonight on the Quad! </h3>
         {% else %}
         <p>Not flying tonight</p>
         {% endif %}
-        <p>Our current club president {{president}}</p>
-        <p>The next build your own workshop is 20 January at 2pm.</p>
+        
+        
         <h1>Featured Videos</h1>
         {% for post in posts %} 
         <h2>{{post.title}}</h2>
